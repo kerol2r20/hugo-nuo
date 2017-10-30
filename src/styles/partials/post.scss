@@ -36,6 +36,10 @@
         background: $background;
         font-size: $size-7;
 
+        .largetag {
+          font-size: 15pt;
+        }
+
         & + li {
           margin-left: 0.5rem;
         }
