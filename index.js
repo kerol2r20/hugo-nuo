@@ -1,3 +1,4 @@
+import './src/scripts/modules/prism';
 // Selected DOM elements
 const html = document.querySelector('html');
 const body = document.querySelector('body');
