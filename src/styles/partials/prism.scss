@@ -1,10 +1,10 @@
-/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+c+aspnet+bash+cpp+csharp+ruby+docker+git+go+graphql+java+json+lua+makefile+markdown+php+pug+python+r+sass+scss+sql+typescript+vim+yaml&plugins=line-highlight+line-numbers+autolinker+toolbar+previewer-base+previewer-color+previewer-gradient+previewer-easing+previewer-time+previewer-angle+command-line+normalize-whitespace+show-language+copy-to-clipboard */
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+c+asciidoc+aspnet+autohotkey+bash+batch+bison+cpp+csharp+ruby+css-extras+django+docker+git+go+graphql+groovy+haskell+http+ini+java+json+julia+latex+less+lua+makefile+markdown+nginx+nsis+php+php-extras+powershell+properties+pug+python+r+jsx+crystal+rust+sass+scss+scala+sql+stylus+swift+typescript+vim+yaml&plugins=line-highlight+line-numbers+autolinker+toolbar+highlight-keywords+previewer-base+previewer-color+previewer-gradient+previewer-easing+previewer-time+previewer-angle+unescaped-markup+command-line+normalize-whitespace+show-language+copy-to-clipboard */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
- 
+
 code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
@@ -524,6 +524,17 @@ pre.code-toolbar > .toolbar span:focus {
 	stroke-width: 32;
 	stroke-dasharray: 0, 500;
 }
+/* Fallback, in case JS does not run, to ensure the code is at least visible */
+.lang-markup script[type='text/plain'],
+.language-markup script[type='text/plain'],
+script[type='text/plain'].lang-markup,
+script[type='text/plain'].language-markup {
+	display: block;
+	font: 100% Consolas, Monaco, monospace;
+	white-space: pre;
+	overflow: auto;
+}
+
 .command-line-prompt {
 	border-right: 1px solid #999;
 	display: block;
